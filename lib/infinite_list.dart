@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:infinity_list/service/comment_service.dart';
 
 class InfiniteList extends StatelessWidget {
   const InfiniteList({super.key});
 
   @override
   Widget build(BuildContext context) {
+    CommentService.fetchCommentList();
     return Scaffold(
       body: SafeArea(
         child: ListView.builder(
